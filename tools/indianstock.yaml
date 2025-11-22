@@ -1,0 +1,109 @@
+identity:
+  name: "get_values"
+  author: "diya8"
+  label:
+    en_US: "Get Values"
+    zh_Hans: "Get Values"
+    pt_BR: "Get Values"
+    ja_JP: "Get Values"
+description:
+  human:
+    en_US: "Get OHLC and volume values for Indian stocks"
+    zh_Hans: "Get OHLC and volume values for Indian stocks"
+    pt_BR: "Get OHLC and volume values for Indian stocks"
+    ja_JP: "Get OHLC and volume values for Indian stocks"
+  llm: "Get OHLC and volume values for Indian stocks"
+parameters:
+  - name: trade_type
+    type: string
+    required: true
+    label:
+      en_US: Trade Type
+      zh_Hans: 交易类型
+      pt_BR: Tipo de Negociação
+      ja_JP: 取引タイプ
+    human_description:
+      en_US: "Type of trade - historical or intraday"
+      zh_Hans: "交易的类型"
+      pt_BR: "Tipo de negociação"
+      ja_JP: "取引の種類"
+    llm_description: "Type of trade - historical or intraday"
+    form: llm
+  - name: trading_symbol
+    type: string
+    required: true
+    label:
+      en_US: Symbol
+      zh_Hans: 交易标的
+      pt_BR: Símbolo
+      ja_JP: シンボル
+    human_description:
+      en_US: "Trading symbol e.g., RELIANCE, HDFCBANK"
+      zh_Hans: "交易标的符号"
+      pt_BR: "Símbolo de negociação"
+      ja_JP: "取引シンボル"
+    llm_description: "Trading symbol e.g., RELIANCE, HDFCBANK"
+    form: llm
+  - name: interval
+    type: string
+    required: true
+    label:
+      en_US: Interval
+      zh_Hans: 间隔
+      pt_BR: Intervalo
+      ja_JP: 間隔
+    human_description:
+      en_US: "Data interval with the following possible values: 1-300 for minutes. 1-5 for hours. 1 for days, weeks, and months."
+      zh_Hans: "数据间隔"
+      pt_BR: "Intervalo de dados"
+      ja_JP: "データ間隔"
+    llm_description: "Data interval e.g., 1min, 5min, 1day"
+    form: llm
+  - name: period
+    type: string
+    required: true
+    label:
+      en_US: Period
+      zh_Hans: 周期
+      pt_BR: Período
+      ja_JP: 期間
+    human_description:
+      en_US: "Period for data. Minutes, hours and days in intraday mode. Minutes, hours, days, weeks and months in historical mode."
+      zh_Hans: "历史数据的周期"
+      pt_BR: "Período para dados históricos"
+      ja_JP: "履歴データの期間"
+    llm_description: "Period e.g., minutes, days"
+    form: llm
+  - name: start_date
+    type: string
+    required: false
+    label:
+      en_US: Start Date
+      zh_Hans: 开始日期
+      pt_BR: Data de Início
+      ja_JP: 開始日
+    human_description:
+      en_US: "Start date for data retrieval in YYYY-MM-DD format"
+      zh_Hans: "数据检索的开始日期"
+      pt_BR: "Data de início para recuperação de dados"
+      ja_JP: "データ取得の開始日"
+    llm_description: "Start date in YYYY-MM-DD format"
+    form: llm
+  - name: end_date
+    type: string
+    required: false
+    label:
+      en_US: End Date
+      zh_Hans: 结束日期
+      pt_BR: Data de Término
+      ja_JP: 終了日
+    human_description:
+      en_US: "End date for data retrieval in YYYY-MM-DD format"
+      zh_Hans: "数据检索的结束日期"
+      pt_BR: "Data de término para recuperação de dados"
+      ja_JP: "データ取得の終了日"
+    llm_description: "End date in YYYY-MM-DD format"
+    form: llm
+extra:
+  python:
+    source: tools/indianstock.py
