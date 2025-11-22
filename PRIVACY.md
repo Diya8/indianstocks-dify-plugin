@@ -101,4 +101,4 @@ Relevant Upstox links:
 
 ### Contact
 
-For questions about this privacy policy, please contact the plugin author via the plugin’s GitHub repository.
+For questions about this privacy policy, please contact the plugin author via the plugin’s [GitHub repository](https://github.com/Diya8/indianstocks-dify-plugin).

@@ -61,4 +61,4 @@ If there is an error in the input format or with fetching the data, the error lo
 
 ### Issues, Feedback and Suggestions
 
-For issues, feedback and suggestions, please raise it in this GitHub repository. I would love to hear back from you!
+For issues, feedback and suggestions, please raise it in this [GitHub repository](https://github.com/Diya8/indianstocks-dify-plugin). I would love to hear back from you!
